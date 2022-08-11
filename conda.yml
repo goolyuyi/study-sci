@@ -1,0 +1,9 @@
+name: my-j
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - numpy
+  - scipy
+  - jupyterlab
+prefix: C:\Users\goolyuyi\anaconda3\envs\my-j
