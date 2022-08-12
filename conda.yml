@@ -6,4 +6,5 @@ dependencies:
   - numpy
   - scipy
   - jupyterlab
+  - pandas
 prefix: C:\Users\goolyuyi\anaconda3\envs\my-j
