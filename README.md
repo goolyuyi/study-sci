@@ -8,7 +8,7 @@
 * Use Sympy!
 
 ## TO INTEGRATE:
-
+* matplotlib: https://matplotlib.org/stable/index.html
 * qtconsole: https://qtconsole.readthedocs.io/en/stable/
 * sympy: https://www.sympy.org/en/index.html
 * jupyter lab: https://jupyterlab.readthedocs.io/en/stable/
