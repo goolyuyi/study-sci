@@ -7,4 +7,6 @@ dependencies:
   - scipy
   - jupyterlab
   - pandas
+  - qtconsole
+  - sympy
 prefix: C:\Users\goolyuyi\anaconda3\envs\my-j
