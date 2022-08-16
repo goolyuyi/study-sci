@@ -7,7 +7,8 @@
 * https://stackoverflow.com/questions/17847902/what-is-the-difference-between-sympy-and-sage
 * Use Sympy!
 
-## TO INTEGRATE:
+## TODO:
+
 * matplotlib: https://matplotlib.org/stable/index.html
 * qtconsole: https://qtconsole.readthedocs.io/en/stable/
 * sympy: https://www.sympy.org/en/index.html
