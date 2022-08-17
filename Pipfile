@@ -13,6 +13,10 @@ sympy = "*"
 qtconsole = "*"
 pandas = "*"
 pyqt5 = "*"
+tqdm = "*"
+jupyterlab-code-formatter = "*"
+black = "*"
+isort = "*"
 
 [dev-packages]
 
