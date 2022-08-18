@@ -1,3 +1,5 @@
 .idea
 psd
 env-jupyter
+
+.ipynb_checkpoints
