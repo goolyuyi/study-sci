@@ -2,31 +2,35 @@
 # * use `C-Enter` to run the block of code
 # * or just Run File
 
+import juyi
+
+juyi.clear_vars()
+
 # %% import
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
+rng = np.random.default_rng(666)
+np.random.seed(19680801)  # seed the random number generator.
+
 # %% basic
 figure, axises = plt.subplots()  # Create a figure containing a single axes.
 axises.plot([1, 2, 3, 4], [1, 4, 2, 3])  # Plot some data on the axes.
 
-plt.show()  # show in pycharm SciView
+# show in pycharm SciView
+# only needed in pycharm!
+plt.show()
 
-# %% subplots
+# %% subplots 2x2
 figure, array_axis = plt.subplots(2, 2)
 figure.show()
 
-# %% numpy
-b = np.matrix([[1, 2, 3], [4, 5, 6]])
-b_array = np.asarray(b)
-
-# %% basic
-np.random.seed(19680801)  # seed the random number generator.
+# %% basic 2
 data = {'a': np.arange(50),
-        'c': np.random.randint(0, 50, 50),
-        'd': np.random.randn(50)}
-data['b'] = data['a'] + 10 * np.random.randn(50)
+        'c': rng.integers(0, 50, 50),
+        'd': rng.normal(0, 1, 50)}
+data['b'] = data['a'] + 10 * rng.normal(0, 1, 50)
 data['d'] = np.abs(data['d']) * 100
 
 fig, ax = plt.subplots(figsize=(5, 2.7), layout='constrained')
@@ -55,10 +59,10 @@ fig.show()
 # %% coding style:PyPlot
 x = np.linspace(0, 2, 100)  # Sample data.
 
-plt.figure(figsize=(5, 2.7), layout='constrained')
+plt.figure(layout='constrained')
 plt.plot(x, x, label='linear')  # Plot some data on the (implicit) axes.
 plt.plot(x, x ** 2, label='quadratic')  # etc.
-plt.plot(x, x ** 3, 'ro-', ms=2, markevery=4, linewidth=1, label='cubic')
+plt.plot(x, x ** 3, 'ro--', ms=4, markevery=8, linewidth=1, label='cubic')
 plt.xlabel('x label')
 plt.ylabel('y label')
 plt.title("Simple Plot")
@@ -66,8 +70,8 @@ plt.legend()
 plt.show()
 
 # %% styling
-data1, data2, data3, data4 = np.random.randn(4, 100)
-fig, ax = plt.subplots(figsize=(5, 2.7))
+data1, data2, data3, data4 = rng.normal(0, 1, (4, 100))
+fig, ax = plt.subplots()
 x = np.arange(len(data1))
 ax.plot(x, np.cumsum(data1), color='blue', linewidth=3, linestyle='--')
 l, = ax.plot(x, np.cumsum(data2), color='orange', linewidth=2)
@@ -76,15 +80,15 @@ fig.show()
 
 # %% scatter
 fig, ax = plt.subplots(figsize=(5, 2.7))
-ax.scatter(data1, data2, s=50, facecolor='C0', edgecolor='k')
+ax.scatter(data1, data2, s=np.abs(data3) * 50, facecolor='C0', edgecolor='k')
 fig.show()
 
 # %% label & text
 mu, sigma = 115, 15
-x = mu + sigma * np.random.randn(10000)
+x = rng.normal(mu, sigma, 100000)
 fig, ax = plt.subplots(figsize=(5, 2.7), layout='constrained')
 # the histogram of the data
-n, bins, patches = ax.hist(x, 50, density=1, facecolor='C0', alpha=0.75)
+n, bins, patches = ax.hist(x, 30, density=1, facecolor='C0', alpha=0.75)
 
 xl = ax.set_xlabel('Length [cm]')
 xl.set_bbox(dict(facecolor='gray', edgecolor='red', boxstyle='round,pad=0.5'))
