@@ -17,6 +17,7 @@ tqdm = "*"
 jupyterlab-code-formatter = "*"
 black = "*"
 isort = "*"
+ipympl = "*"
 
 [dev-packages]
 

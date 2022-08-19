@@ -1,5 +1,6 @@
 .idea
 psd
 env-jupyter
+local-refs
 
 .ipynb_checkpoints
