@@ -98,3 +98,10 @@ workspace:
           commands, or by setting the JUPYTERLAB_DIR environment variable.
     * User Settings Directory: where JupyterLab stores user-level settings for JupyterLab extensions
     * Workspaces Directory: where JupyterLab stores workspaces
+
+
+## qtconsole
+### style set:
+* `colors=`: `lightbg`,`linux`-darkbg,`NoColor`
+* `style=nord`:https://pygments.org/styles/
+* `--ConsoleWidget.font_family="Anonymous Pro" --ConsoleWidget.font_size=12`
