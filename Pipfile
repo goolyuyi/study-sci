@@ -18,6 +18,7 @@ jupyterlab-code-formatter = "*"
 black = "*"
 isort = "*"
 ipympl = "*"
+ptipython = "*"
 
 [dev-packages]
 
